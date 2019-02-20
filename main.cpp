@@ -3,7 +3,7 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-void sortDescending(int,int,int);
+void sortDescending(int&,int&,int&);
 void swap(int&,int&);
 
 int main()
@@ -12,14 +12,20 @@ int main()
   cout<<"Enter any three numbers: ";
   cin>>numA>>numB>>numC;
 
-  sortDescending(numA, numB, numC);
-  
+  sortDescending(numA, numB, numC); //call to sort the three integers in descending order
+
   cout<<"From greatest to least, they are: ";
   cout<<numA<<","<<numB<<","<<numC<<endl;
   return 0;
 }
 
-void sortDescending(int first, int second, int third)
+/*
+  sortDescending takes 3 integers passed by reference and invokes the
+  swap function when one of the integers is less than the other.
+  The result of this funtion is the integers containing in
+  descending order.
+*/
+void sortDescending(int &first, int &second, int &third)
 {
   if( first < third )
   {
@@ -35,6 +41,10 @@ void sortDescending(int first, int second, int third)
   }
 }
 
+/*
+  swap function takes 2 integers passed by reference and swaps
+  the value that each integer contains.
+*/
 void swap(int &first, int &second)
 {
   int temp = first;
