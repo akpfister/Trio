@@ -45,9 +45,9 @@ void sortDescending(int &first, int &second, int &third)
   swap function takes 2 integers passed by reference and swaps
   the value that each integer contains.
 */
-void swap(int &first, int &second)
+void swap(int &a, int &b)
 {
-  int temp = first;
-  first = second;
-  second = temp;
+  int temp = a;
+  a = b;
+  b = temp;
 }
